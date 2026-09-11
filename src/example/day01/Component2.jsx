@@ -1,7 +1,7 @@
 // Component2.jsx 만들고 78~79 코드 따라서 작성
 // App.jsx -> Component2.jsx 
 // 1. 선언적함수 방법으로 컴포넌트 생성
-function FrontComp(props){
+function FrontComp( props ){
     return (<>
         <li>프론트엔드</li>
         <ul>
@@ -13,7 +13,7 @@ function FrontComp(props){
     </>)
 }
 // 2. 화살표함수 방법으로 컴포넌트 생성
-const BackComp = (props) => {
+const BackComp = ( props ) => {
     return (<>
         <li> 백엔드 </li>
         <ul>

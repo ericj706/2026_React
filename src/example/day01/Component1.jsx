@@ -7,13 +7,13 @@
     3. { } 안에 return 에서는 JSX문법가능, 그외 JS문법
         return 에서는 2줄이상 입력시 (<> <>) 묶는다.
 */
-function Footer( props ){       // 푸터 
+function Footer(){       // 푸터 
     return <div> 푸터구역 </div>
 }
-function Header( props ){       // 헤더 
+function Header(){       // 헤더 
     return <div> 헤더구역 </div>
 }
-export default function Component1( props ){ // 본문
+export default function Component1(){ // 본문
     return (<>
         <Header> </Header>
         <div> 메인페이지 </div>
