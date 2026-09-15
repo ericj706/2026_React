@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CategoryManager from './CategoryManager';
-import ReviewManager from './ReviewManager';
+import CategoryManager from './practice/CategoryManager';
+import ReviewManager from './practice/ReviewManager';
 
 export default function ProductManager() {
   const [products, setProducts] = useState([]);
