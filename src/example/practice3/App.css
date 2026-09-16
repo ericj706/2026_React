@@ -1,0 +1,40 @@
+*{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#sidebar{
+    background-color: pink;
+    position: fixed;
+    top: 0;      
+    left: 0;         
+    width: 200px;      
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#main{
+    margin-left: 300px;
+}
+
+.sideTitle{
+    padding-left: 20px;
+    padding-bottom: 15px;
+    border-bottom: solid white 1px;
+}
+.home{
+    margin-left: 15px;
+    font-size: 20px;
+    border-bottom: solid white 1px;
+}
+.team{
+    padding-left: 20px;
+    font-size: small;
+}
+.team>li{
+    font-size: 17px;
+    padding-top: 10px;
+}
