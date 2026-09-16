@@ -17,5 +17,6 @@ const create = createRoot( root );
 // import Component1 from "./example/day01/Component1";
 // create.render( <Component> /<Component> )
 
-import Practice2 from "./example/practice2/Practice2";
-create.render( <Practice2/> )
+import App from "./example/day04/App";
+import { BrowserRouter } from "react-router-dom";
+create.render( <BrowserRouter> <App/> </BrowserRouter> )
