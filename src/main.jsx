@@ -17,6 +17,6 @@ const create = createRoot( root );
 // import Component1 from "./example/day01/Component1";
 // create.render( <Component> /<Component> )
 
-import App from "./example/practice3/App";
+import ExternalApiFetcher from "./example/day05/ExternalApiFetcher";
 import { BrowserRouter } from "react-router-dom";
-create.render( <BrowserRouter> <App/> </BrowserRouter> )
+create.render( <BrowserRouter><ExternalApiFetcher /></BrowserRouter> )
