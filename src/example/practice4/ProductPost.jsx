@@ -6,6 +6,14 @@ export default function ProductPost(){
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
     const [cno, setCno] = useState("");
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/view')
+            .then((re) => {
+                setData(re.data);
+            });
+    }, []);
 
     // 카테고리 목록
     const [categories, setCategories] = useState([]);
@@ -50,7 +58,9 @@ export default function ProductPost(){
         setPrice("");
         setCno("");
     };
+    if (!data || !data.data) return null;
 
+    const list = data.data;
 
     return (
     <div className="card-container">
@@ -113,6 +123,31 @@ export default function ProductPost(){
                     </button>
                 </div>
             </div>
+        </div>
+        <div>
+            <h3 className='mainTitle'>안양 생필품 가격동향</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>품목</th>
+                        <th>규격</th>
+                        <th>당월평균(원)</th>
+                        <th>전월평균(원)</th>
+                        <th>증감률(%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {list.map((item, index) => (
+                        <tr key={index}>
+                            <td>{item["품목"]}</td>
+                            <td>{item["규격"]}</td>
+                            <td>{item["당월평균"]}</td>
+                            <td>{item["전월평균"]}</td>
+                            <td>{item["증감"]}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     </div>
     );
