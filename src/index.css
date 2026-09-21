@@ -1,10 +1,23 @@
-css.backEnd{color: blue;}
-#backEndSub{
-  font-size: 1.5em;
-  font-weight: bold;
+*{margin:5px;}
+
+input,textarea {width: 95%;}
+input[type=submit] {width: 100px;}
+
+#boardTable{
+    border: 1px solid gray; border-collapse: collapse; width: 500px;
 }
-.warnings{
-  color: white;
-  background-color: red;
-  font-size: 1.2em;
+#boardTable tr{
+    text-align: center;
+}
+#boardTable th, td{
+    border: 1px solid gray;
+}
+#boardTable td{
+    text-align: left;
+}
+#boardTable td.cen{
+    text-align: center;
+}
+#boardTale td.subject{
+    text-align: left;
 }
