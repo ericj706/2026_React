@@ -30,7 +30,7 @@ export default function ChatRoom(props){
         clientRef.current = client;
         // 만약에 컴포넌트 사라지면 (생명주기) , stomp종료, cient.deactivate();
         return ()=>{client.deactivate();}
-    }, [])
+    }, []);
     
 
     // 전송시 백엔드에게 메시지 보내기
@@ -54,14 +54,15 @@ export default function ChatRoom(props){
 
     return(<>
         <h3>채팅방</h3>
-        {
-            messages.map( (msg)=>{
-            <div>{msg.sender} : {msg.content}</div> })
-        }
-
-
-        <input value={message} onChange={(e)=> setMessage(e.target.value)}/>
-        <button type="button" onClick={sendMessage}> 전송 </button>
-
+        <div>
+            {messages.map( (msg)=>(
+                <div>{msg.sender} : {msg.content}</div> 
+            ))}
+        </div>
+        <div>
+            <input value={message} onChange={(e)=> setMessage(e.target.value)}/>
+            <button type="button" onClick={sendMessage}> 전송 </button>
+        </div>
+        
     </>)
 }
